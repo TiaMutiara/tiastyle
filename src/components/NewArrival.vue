@@ -14,7 +14,7 @@
           <div class="card-body">
             <h4>{{ produk.nama }}</h4>
             <h4>Rp{{ produk.harga }}</h4>
-            <a :href="produk.link_external" class="btn btn-danger btn-block">beli</a>
+            <a :href="produk.link_eksternal" class="btn btn-danger btn-block">beli</a>
           </div>
         </div>
       </div>
