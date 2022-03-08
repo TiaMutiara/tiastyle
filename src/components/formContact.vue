@@ -1,6 +1,6 @@
 <template>
-  <div class="col-md- mt-5 mb-5">
-    <h2 class="text-left">Bisa Tanya Dulu</h2>
+  <div class="col-md-12 mt-5 mb-5">
+    <h2 class="text-left">Boleh Tanya Dulu</h2>
     <form @submit.prevent="kirim">
       <div class="form-group">
         <label>Nama</label>
