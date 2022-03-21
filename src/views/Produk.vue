@@ -41,7 +41,7 @@ export default {
   methods: {
     async getProduk() {
       let { data, error } = await this.$supabase.from("tb_produk")
-        .select(*), .order('stok', {ascending = false})
+        .select(*), .order('stok', {ascending : false})
 
       if (data) {
          this.products = data;
