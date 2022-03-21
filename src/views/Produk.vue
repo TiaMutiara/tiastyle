@@ -13,7 +13,7 @@
           <div class="card-body">
             <h4>{{ produk.nama }}</h4>
             <h4>Rp{{ produk.harga }}</h4>
-            <a v-if="produk.stok > 0" :href="produk.link_eksternal" class="btn btn-danger btn-block">beli</a>
+            <a v-if="produk.stok > 0" :href="produk.link_eksternal" target="_blank" class="btn btn-danger btn-block">beli</a>
             <a v-else href="#"  class="disabled btn btn-dark btn-block">stok habis bestie!</a>
           </div>
         </div>
@@ -41,7 +41,7 @@ export default {
   methods: {
     async getProduk() {
       let { data, error } = await this.$supabase.from("tb_produk")
-        .select()
+        .select(*), .order('stok', {ascending = false})
 
       if (data) {
          this.products = data;
