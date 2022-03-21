@@ -11,11 +11,10 @@
             <img :src="produk.foto" width="100%" class="img-thumb">
           </div>
           <div class="card-body">
-           <div v-if="!loading && posts.length < count" class="text-center">
             <h4>{{ produk.nama }}</h4>
             <h4>Rp{{ produk.harga }}</h4>
             <a v-if="produk.stok > 0" :href="produk.link_eksternal" target="_blank" class="btn btn-danger btn-block">beli</a>
-            <a v-else href="#" @click="loadMore" class="disabled btn btn-dark btn-block"><i class="fas fa-grin-hearts">lihat lainnya</i> stok habis bestie!</a>
+            <a v-else href="#"  class="disabled btn btn-dark btn-block">stok habis bestie!</a>
           </div>
         </div>
       </div>
